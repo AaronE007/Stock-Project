@@ -1,7 +1,11 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+s1 = Sector.create(name: "Energy Sector", description: "Companies that work in sourcing energy.")
+s2 = Sector.create(name: "Materials Sector", description: "Companies that make goods used in manufacturing.")
+s3 = Sector.create(name: "Industrials Sector", description: "Companies that produce industrial goods across a wide range.")
+s4 = Sector.create(name: "Consumer Discretionary Sector", description: "Companies that produce good that are not absolutely neccisary to the consumer.")
+s5 = Sector.create(name: "Consumer Staples Sector", description: "Companies that work in sourcing energy.")
+s6 = Sector.create(name: "Healthcare Sector", description: "Companies that work in sourcing energy.")
+s7 = Sector.create(name: "Financials Sector", description: "Companies that work in sourcing energy.")
+s8 = Sector.create(name: "Information Technology Sector", description: "Companies that work in sourcing energy.")
+s9 = Sector.create(name: "Communication Services Sector", description: "Companies that work in sourcing energy.")
+s10 = Sector.create(name: "Utilities Sector", description: "Companies that work in sourcing energy.")
+s11 = Sector.create(name: "Real Estate Sector", description: "Companies that work in sourcing energy.")
