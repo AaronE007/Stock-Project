@@ -1,5 +1,6 @@
 class User < ApplicationRecord
-  has_many :recipes
+  has_many :stocks
+  has_many: sectors, through: :stocks
   
   has_secure_password
 
