@@ -11,5 +11,10 @@ class Api::SessionsController < ApplicationController
     else 
       render json: { errors: ["Invalid Username or Password"] }, status: :unauthorized
   end 
-  
+
+  def delete
+    session.delte(:user_id)
+    head :no-content
+  end 
+
 end 
