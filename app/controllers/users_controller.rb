@@ -7,6 +7,9 @@ class Api::UsersController < ApplicationController
     renderjson: UserSerializer.new(user), status: :created
   end 
 
+  def show
+    render json: UserSerializer.new(@current_user), status: :ok
+  end 
 
   private
 
