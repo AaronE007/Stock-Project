@@ -1,14 +1,14 @@
-class Api::UsersController < ApplicationController
+class UsersController < ApplicationController
   skip_before_action :authorize, only: :create
 
   def create 
     user = User.create!(user_params)
     session[:user_id] = user.id
-    renderjson: UserSerializer.new(user), status: :created
+    renderjson: user, status: :created
   end 
 
   def show
-    render json: UserSerializer.new(@current_user), status: :ok
+    render json: user, status: :ok
   end 
 
   private
