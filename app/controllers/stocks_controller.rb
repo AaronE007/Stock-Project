@@ -1,5 +1,7 @@
 class StocksController < ApplicationController
-  
+  before_action :find_stock, only [:update, :destroy]
+
+
   def index
     render json: Stock.all  
   end 
@@ -15,7 +17,7 @@ class StocksController < ApplicationController
   end 
 
   def show
-    render json: stock, status: :ok
+    render json: @stock, status: :ok
   end
 
   def destroy
