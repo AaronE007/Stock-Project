@@ -9,7 +9,19 @@ class StocksController < ApplicationController
     render json: stock, status: :created
   end
 
+  def update
+    @stock&.update(stock_params)
+    render json: stock, status: :ok
+  end 
 
+  def show
+    render json: stock, status: :ok
+  end
+
+  def destroy
+    @stock&.destroy
+    head :no_content
+  end 
 
   private 
 
