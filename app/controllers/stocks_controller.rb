@@ -9,11 +9,16 @@ class StocksController < ApplicationController
     render json: stock, status: :created
   end
 
+
+
   private 
+
+  def find_stock 
+    @stock = Stock.find(params[:id])
+  end 
 
   def recipe_params
     params.permit(:name, :price_purchased_at, :number, :info)
   end 
-
 
 end
