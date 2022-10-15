@@ -31,7 +31,7 @@ class StocksController < ApplicationController
     @stock = Stock.find(params[:id])
   end 
 
-  def recipe_params
+  def stock_params
     params.permit(:name, :price_purchased_at, :number, :info)
   end 
 
