@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   has_many :stocks
-  has_many: :companies, through: :stocks
+  has_many :companies, through: :stocks
   
   has_secure_password
 

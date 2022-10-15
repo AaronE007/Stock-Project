@@ -32,7 +32,7 @@ class StocksController < ApplicationController
   end 
 
   def stock_params
-    params.permit(:name, :price_purchased_at, :number, :info)
+    params.require(:stock).permit(:name, :price_purchased_at, :number, :info)
   end 
 
 end
