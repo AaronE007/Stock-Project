@@ -1,7 +1,6 @@
 class StocksController < ApplicationController
   before_action :find_stock, only [:update, :destroy]
 
-
   def index
     render json: Stock.all  
   end 
@@ -12,17 +11,21 @@ class StocksController < ApplicationController
   end
 
   def update
-    @stock&.update(stock_params)
-    render json: stock, status: :ok
+    if current_user.stocks.includes(@stock)
+      @stock&.update!(post_params)
+      render json: stock
+    else
+      no_route
+    end 
   end 
 
   def show
-    render json: @stock, status: :ok
+    render json: stock
   end
 
   def destroy
-    @stock&.destroy
-    head :no_content
+    current_user.stock.destroy
+    render json: {message: "Stock deleted"}
   end 
 
   private 
