@@ -12,8 +12,9 @@ class SessionsController < ApplicationController
       render json: { errors: ["Invalid Username or Password"] }, status: :unauthorized
   end 
 
-  def delete
+  def destroy
     session.clear
+    head :no_content
   end 
 
 end 
