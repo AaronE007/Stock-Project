@@ -8,7 +8,12 @@ class UsersController < ApplicationController
   end 
 
   def show
-    render json: @current_user
+    user = current_user
+    if user
+    render json: user
+    else 
+      render json: {error: "Not Authorized"}, status: :unauthorized
+    end 
   end 
 
   private
