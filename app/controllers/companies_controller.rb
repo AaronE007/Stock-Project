@@ -1,9 +1,15 @@
 class CompaniesController < ApplicationController
+  skip_before_action :authorized!, only: [:index]
   
   def create
-    stock = current_user.companies.create!(companies_params)
+    company = current_user.companies.create!(companies_params)
     render json: company, status: :created
   end
+
+  def index 
+    render json: Company.all
+  end 
+
 
   def show 
     render json: @companies
@@ -13,7 +19,7 @@ class CompaniesController < ApplicationController
   private 
 
   def companies_params
-    params.permit(:name, :description)
+    params.require(:company).permit(:name, :description)
   end
 
 end

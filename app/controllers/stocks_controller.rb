@@ -6,7 +6,7 @@ class StocksController < ApplicationController
   end 
 
   def create
-    stock = current_user.stocks.create!(stock_params)
+    stock = @current_user.stocks.create!(stock_params)
     render json: stock, status: :created
   end
 
@@ -20,6 +20,7 @@ class StocksController < ApplicationController
   end 
 
   def show
+    stock = 
     render json: stock
   end
 
