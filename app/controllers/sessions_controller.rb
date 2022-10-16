@@ -13,8 +13,7 @@ class SessionsController < ApplicationController
   end 
 
   def delete
-    session.delte(:user_id)
-    head :no-content
+    session.clear
   end 
 
 end 
