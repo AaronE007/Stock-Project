@@ -7,15 +7,15 @@ class CompaniesController < ApplicationController
   end
 
   def index 
-    render json: Company.all
+    companies = Company.all
+    render json: companies 
   end 
 
-
   def show 
-    render json: @companies
+    company = Company.find(params[:id])
+    render json: company
   end
 
-  
   private 
 
   def companies_params
