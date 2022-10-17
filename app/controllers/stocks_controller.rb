@@ -6,7 +6,7 @@ class StocksController < ApplicationController
   end 
 
   def create
-    stock = @current_user.stocks.create!(stock_params)
+    stock = Stock.create!(stock_params)
     render json: stock, status: :created
   end
 
@@ -20,7 +20,8 @@ class StocksController < ApplicationController
   end 
 
   def show
-    stock = 
+    stock = find_stock
+    no_route unless current_user.stocks.include? stock
     render json: stock
   end
 

@@ -2,7 +2,7 @@ class CompaniesController < ApplicationController
   skip_before_action :authorized!, only: [:index]
   
   def create
-    company = current_user.companies.create!(companies_params)
+    company = Company.create!(companies_params)
     render json: company, status: :created
   end
 
