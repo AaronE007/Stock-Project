@@ -8,7 +8,6 @@ import { BrowserRouter } from "react-router-dom";
 ReactDOM.render(
   <UserProvider>
     <BrowserRouter>
-      <GlobalStyle />
         <App />
     </BrowserRouter>
   </UserProvider>,
