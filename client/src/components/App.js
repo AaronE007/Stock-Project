@@ -4,6 +4,7 @@ import NavBar from "./NavBar";
 import Login from "../pages/Login";
 import RecipeList from "../pages/RecipeList";
 import NewRecipe from "../pages/NewRecipe";
+import 
 
 function App() {
   const [user, setUser] = useState(null);
@@ -23,14 +24,14 @@ function App() {
     <>
       <NavBar user={user} setUser={setUser} />
       <main>
-        <Switch>
+        <Routes>
           <Route path="/new">
             <NewRecipe user={user} />
           </Route>
           <Route path="/">
             <RecipeList />
           </Route>
-        </Switch>
+        </Routes>
       </main>
     </>
   );
