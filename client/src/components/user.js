@@ -4,7 +4,7 @@ const UserContext = React.createContext();
 
 
 function UserProvider({ children }) {
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState(null);
   const [loggedIn, setLoggedIn] = useContext(false)
 
   useEffect(() => {

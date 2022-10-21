@@ -4,7 +4,7 @@ import { UserContext } from './user'
 export default function Home() {
    const { user } = useContext(UserContext)
 
-  if  (!user) {
+  if  (!user || user.error) {
     return(<h1> Please Navigate to Login or Sign Up Form</h1>)
   } else{
       return (
