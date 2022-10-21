@@ -17,7 +17,7 @@ function SignUpForm({ onLogin }) {
    e.preventDefault()
    fetch('/signup', {
       method: 'POST',
-      method: {'Content-Type': 'appliction/json'},
+      headers: {'Content-Type': 'appliction/json'},
       body: JSON.stringify({
         username: username,
         password: password,
@@ -34,7 +34,7 @@ function SignUpForm({ onLogin }) {
         setErrors(errorsList)
       }
    } )
-   
+
   }
 
   return (

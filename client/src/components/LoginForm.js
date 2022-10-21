@@ -2,7 +2,7 @@ import React, { useContext,useState } from "react";
 import { UserContext } from "./user";
 
 function LoginForm() {
-  const {setUser, login} = useContext(UserContext)
+  const {login} = useContext(UserContext)
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");

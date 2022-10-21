@@ -23,7 +23,7 @@ function UserProvider({ children }) {
 
   const logout = (user) => {
     setUser(user)
-    setLoggedIn(true)
+    setLoggedIn(false)
   }
 
   const signup = (user) => {
