@@ -29,7 +29,7 @@ const Navbar = () => {
       <button onClick={logoutUser} style={style}> Sign Out</button>
       <Link style={style} to="/">Home</Link>
       <Link style={style}  to="/login">Login</Link>
-      <Link style={style}  to="/signup">Signip</Link>
+      <Link style={style}  to="/signup">Signup</Link>
     </nav>
   )
 }

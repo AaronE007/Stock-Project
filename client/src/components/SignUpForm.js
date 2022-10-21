@@ -52,8 +52,11 @@ function SignUpForm({ onLogin }) {
         <input onChange={(e) => setPasswordConfirmation(e.target.value)} type="password" id="password_confirmation" value={passwordConfirmation}  required/>
         <br/>
         <br/>
-      <label>Username: </label>
+      <label>Bio: </label>
       <input type="text" id="bio" value={bio} onChange={(e) => setBio(e.target.value)} required/>
+        <br/>
+        <br/>
+      <input type="submit" value="Add User" />
     </form>
     <ul>
       {errors}
