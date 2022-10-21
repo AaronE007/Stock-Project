@@ -5,6 +5,8 @@ import Login from "../pages/Login";
 import RecipeList from "../pages/RecipeList";
 import NewRecipe from "../pages/NewRecipe";
 import Home from "./Home";
+import SignUpForm from "./SignUpForm";
+import LoginForm from "./LoginForm";
 
 function App() {
   
@@ -13,22 +15,11 @@ function App() {
       <NavBar  />
       <main>
         <Routes>
-          <Route path="/new"> 
-          </Route>
-          <Route path="/">
-          <Home />
-          </Route>
-          <Route path="/">
-          <Home />
-          </Route>
-          <Route path="/logout">
-          <Home />
-          </Route>
           <Route path="/login">
-          <Home />
+            <LoginForm />
           </Route>
           <Route path="/signup">
-          <Home />
+            <SignUpForm />
           </Route>
           <Route path="/">
             <Home />
